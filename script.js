@@ -144,7 +144,10 @@ function assignWinnerCards(winner){
 }
 
 function compareCards(){
+	while(player2Stack.length>0 && player1Stack.length>0){
 	addCardsInPlay()
+	console.log('Player 1 played ' + cardsInPlay1[0].rank + ' of ' + cardsInPlay1[0].suit)
+	console.log('Player 2 played ' + cardsInPlay2[0].rank + ' of ' + cardsInPlay2[0].suit)
 	// console.log(cardsInPlay1)
 	// console.log(cardsInPlay2)
 	// console.log(spoilsOfWar)
@@ -188,6 +191,7 @@ function compareCards(){
 		console.log('War declared: ' + warDeclared)
 		prepareForWar()
 	}
+}
 }
 
 
