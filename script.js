@@ -146,42 +146,44 @@ function assignWinnerCards(winner){
 function compareCards(){
 	while(player2Stack.length>0 && player1Stack.length>0){
 	addCardsInPlay()
-	console.log('Player 1 played ' + cardsInPlay1[0].rank + ' of ' + cardsInPlay1[0].suit)
-	console.log('Player 2 played ' + cardsInPlay2[0].rank + ' of ' + cardsInPlay2[0].suit)
+	console.log('Player 1 played ' + cardsInPlay1[0].rank + ' of ' + cardsInPlay1[0].suit + '.')
+	console.log('Player 2 played ' + cardsInPlay2[0].rank + ' of ' + cardsInPlay2[0].suit + '.')
 	// console.log(cardsInPlay1)
 	// console.log(cardsInPlay2)
 	// console.log(spoilsOfWar)
 	takeFirstCards()
 
 	if (cardsInPlay1[0].rank > cardsInPlay2[0].rank){
-		console.log('Player 1 wins round')
+		console.log('Player 1 wins round.')
 		warDeclared=false;
 		console.log('War declared: ' + warDeclared)
 		winnerOfRound=player1Stack
 		// console.log(player1Stack)
 		// console.log(player2Stack)
 		assignWinnerCards(winnerOfRound)
-		console.log('Plyer 1 has ' + player1Stack.length + ' cards.');
+		console.log('Player 1 has ' + player1Stack.length + ' cards.');
 		console.log('Player 2 has ' + player2Stack.length + ' cards.');
+		console.log('Next round.')
 
 		if(player2Stack.length===0){
-		console.log('Player 1 wins game')
+		console.log('Player 1 wins game.')
 	}
 
 		cardsInPlay1=[]
 		cardsInPlay2=[]
 	} else if(cardsInPlay2[0].rank > cardsInPlay1[0].rank){
-		console.log('Player 2 wins round')
+		console.log('Player 2 wins round.')
 		warDeclared=false;
 		console.log('War declared: '+warDeclared)
 		winnerOfRound=player2Stack;
 		// console.log(player1Stack)
 		// console.log(player2Stack)
 		assignWinnerCards(winnerOfRound)
-		console.log('Plyer 1 has ' + player1Stack.length + ' cards.');
+		console.log('Player 1 has ' + player1Stack.length + ' cards.');
 		console.log('Player 2 has ' + player2Stack.length + ' cards.');
+		console.log('Next round.')
 		if(player1Stack.length===0){
-		console.log('Player 2 wins game')
+		console.log('Player 2 wins game.')
 	}
 		cardsInPlay1=[]
 		cardsInPlay2=[]
