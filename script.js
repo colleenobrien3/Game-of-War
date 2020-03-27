@@ -1,14 +1,4 @@
 
-
-// LAB-CLASSES
-
-
-//  * Define a Card class with the following properties:
-//  *
-//  *   - suit (hearts, spades, clubs, diamonds)
-//  *   - rank (Ace, 2, 3, 4, .. Jack, King, Queen)
-//  *   - score (1, 2, 3, 4, ... 11, 12, 13)
-
 class Card {
 	constructor(suit,rank,score){
 		this.suit=suit
@@ -18,19 +8,11 @@ class Card {
 }
 
 
- // *
- // * Define a Deck class with the following properties and methods:
- // *
- // *   - length (the number of cards - should start at 52)
- // *   - cards (an array of cards in the deck)
- // *   - draw: return a random card from the cards array
 
 
-
- class Deck {
+class Deck {
  	constructor(){
  		let gameDeck=[]
- 
  		let suits = ['hearts', 'clubs', 'spades', 'diamonds']
 		let ranks = [2,3,4,5,6,7,8,9,10,'Jack','Queen','King','Ace']
 		let scores=[2,3,4,5,6,7,8,9,10,11,12,13,14]
@@ -41,19 +23,14 @@ class Card {
 	}
 		this.cards=gameDeck
  		this.length=gameDeck.length
-
- 		// what ever you want here
- 		// ...
- 		// ...
  	}
  	draw(){
- 		console.log('hello')
- 		//i mean i can copy and paste the randomization function in here if you want?
+ 		console.log('GO GO GO!')
  	}
  }
 
  const entireDeck = new Deck()
- console.log(entireDeck)
+
 
  entireDeck.draw()
 
@@ -65,7 +42,7 @@ class Card {
 }
 
 shuffleCards(entireDeck.cards);
-console.log(entireDeck);
+
 
 
 
@@ -95,7 +72,6 @@ function splitCards2(){
 }
 splitCards2();
 
-//works til here
 
 let spoilsOfWar=[];
 let cardsInPlay1=[];
@@ -118,13 +94,11 @@ function takeFirstCards(){
 	}
 
 
-//works thru here
-
 function prepareForWar(){
 		if (player2Stack.length<3){
-			console.log('Player 2 wins')
+			console.log('Oh no, Player 2 does not have enough cards!')
 		} else if (player2Stack.length<3){
-			console.log('Player 1 wins')
+			console.log('Oh no, Player 1 does not have enough cards!')
 		}
 		spoilsOfWar.push(player2Stack[0], player2Stack[1], player2Stack[2]);
 		spoilsOfWar.push(player1Stack[0], player1Stack[1], player1Stack[2]);
@@ -139,7 +113,9 @@ function assignWinnerCards(winner){
 	winner.push(...cardsInPlay1);
 	winner.push(...cardsInPlay2);
 	if(spoilsOfWar.length>0){
-	winner.push(...spoilsOfWar)}
+	winner.push(...spoilsOfWar)
+	console.log('Player 1 has ' + player1Stack.length)
+	console.log('Player 2 has ' + player1Stack.length)}
 	spoilsOfWar=[]
 }
 
@@ -196,10 +172,26 @@ function compareCards(){
 }
 }
 
-
 for(let i=0; i<1000; i++){
+	// if (player2Stack.length === 0 || player1Stack.length === 0){
+	// 	console.log('Game over.')
+	// 	if (player2Stack.length>0){
+	// 		console.log('Player 2 wins')
+	// 	}
+	// 	else {
+	// 		console.log('Player 1 wins.')
+	// 	}}
 	compareCards()
 }
+
+	if (player2Stack.length === 0 || player1Stack.length === 0){
+		console.log('Game over.')
+		if (player2Stack.length>0){
+			console.log('Player 2 wins!')
+		}
+		else {
+			console.log('Player 1 wins!')
+		}}
 
 
 

@@ -1,0 +1,29 @@
+.image {
+	background-image: url('./macCards.gif');
+	background-position: center;
+	background-size: cover;
+	height: 80vh;
+	margin: 0
+}
+
+body {
+	margin: 0;
+	background-color: rgb(248, 249, 249);
+	align-items: center;
+	align-content: center;
+	text-align: center;
+}
+
+.greet {
+	font-size: 25px;
+	font-weight: bold;
+	border-top: solid;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 1.5%
+}
+.instructions {
+	font-size: 30px;
+	font-weight: bold;
+}
