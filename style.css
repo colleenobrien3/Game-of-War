@@ -6,6 +6,14 @@
 	margin: 0
 }
 
+.song {
+	font-size: 20px;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
 body {
 	margin: 0;
 	background-color: rgb(248, 249, 249);
@@ -21,7 +29,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	padding: 1.5%
+	padding-top: 1.5%
 }
 .instructions {
 	font-size: 30px;
